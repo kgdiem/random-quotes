@@ -1,3 +1,7 @@
+const mock = jest.fn((uri) => Promise.resolve(uri));
+
+jest.mock('../makeImageURI', () => mock);
+
 test('appendQuoteAndImage should append a quote and an image', async () => {
   global.fetch = require('node-fetch');
   

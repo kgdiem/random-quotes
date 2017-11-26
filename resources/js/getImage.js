@@ -3,5 +3,16 @@ module.exports = function getImage(queryString){
 
   return fetch(`https://api.giphy.com/v1/gifs/search?q=${formattedQuery}&api_key=inPBzYRrnBFaRTyTrSSRpD21B4HEO5xT`)
     .then(res => res.json())
-    .then(json => Promise.resolve({url: json.data[0].images.downsized_medium}));
+    .then(json => {
+      
+      const results = json.data;
+
+      if(results.length){
+        return Promise.resolve({url: results[0].images.downsized_medium})
+      }
+      else{
+        return Promise.resolve(undefined);
+      }
+  
+    });
 }

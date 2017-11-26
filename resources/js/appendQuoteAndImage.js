@@ -13,7 +13,9 @@ module.exports = async function appendQuoteAndImage(){
 
   const image = await getImage(quote.quoteAuthor);
 
-  appendImage(image.url.url);
+  if(image){
+    await appendImage(image.url.url);
+  }
 
   toggleLoading();
 
