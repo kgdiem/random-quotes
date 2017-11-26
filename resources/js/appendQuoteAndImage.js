@@ -9,11 +9,11 @@ module.exports = async function appendQuoteAndImage(){
 
   const quote = await getQuote();
 
-  appendQuote(quote);
+  appendQuote(quote.text);
 
-  const imageURL = await getImage();
+  const image = await getImage(quote.author);
 
-  appendImage(imageURL);
+  appendImage(image.url);
 
   toggleLoading();
 }
