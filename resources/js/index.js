@@ -1,3 +1,5 @@
+const toggleLoading = require('./toggleLoading');
+
 appendQuoteAndImage();
 
 document.getElementsByTagName('button')[0].onclick = appendQuoteAndImage;
@@ -14,10 +16,6 @@ async function appendQuoteAndImage(){
   appendImage(imageURL);
 
   toggleLoading();
-}
-
-function toggleLoading(){
-  
 }
 
 function getQuote(){
