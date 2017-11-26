@@ -9794,24 +9794,21 @@ module.exports = function () {
           case 7:
             image = _context.sent;
 
-
-            console.log(image);
-
             if (!image) {
-              _context.next = 12;
+              _context.next = 11;
               break;
             }
 
-            _context.next = 12;
+            _context.next = 11;
             return appendImage(image.url.url);
 
-          case 12:
+          case 11:
 
             toggleLoading();
 
             return _context.abrupt('return', _promise2.default.resolve(true));
 
-          case 14:
+          case 13:
           case 'end':
             return _context.stop();
         }
@@ -11634,7 +11631,13 @@ module.exports = function getImage(queryString) {
 
 
 module.exports = function appendQuote(quote, author) {
-  document.querySelector('#quote p').textContent = quote + ' ~' + author;
+  var paragraph = document.querySelector('#quote p');
+
+  paragraph.innerHTML = '<span class="quote">' + quote + '</span>&nbsp;';
+
+  if (author) {
+    paragraph.innerHTML += '<br><span class="author">~ ' + author + '</span>';
+  }
 };
 
 /***/ }),
