@@ -1,4 +1,8 @@
 const toggleLoading = require('./toggleLoading');
+const getQuote = require('./getQuote');
+const getImage = require('./getImage');
+const appendQuote = require('./appendQuote');
+const appendImage = require('./appendImage');
 
 appendQuoteAndImage();
 
@@ -16,20 +20,4 @@ async function appendQuoteAndImage(){
   appendImage(imageURL);
 
   toggleLoading();
-}
-
-function getQuote(){
-
-}
-
-function appendQuote(){
-
-}
-
-function getImage(){
-
-}
-
-function appendImage(){
-
 }
