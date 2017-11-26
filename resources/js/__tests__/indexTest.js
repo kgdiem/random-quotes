@@ -26,3 +26,18 @@ test('toggleLoading hides loading div and shows quote div on second call', () =>
   expect(document.getElementById('quote').style.display).toEqual("block");
 
 });
+
+test('toggleLoading hides quote div and shows loading div on third call', () => {
+  document.body.innerHTML = `
+    <div id="quote"></div>
+    <div id="loading"></div>`;
+
+  const toggleLoading = require('../toggleLoading');
+
+  toggleLoading();
+  toggleLoading();
+  toggleLoading();
+
+  expect(document.getElementById('loading').style.display).toEqual('block');
+  expect(document.getElementById('quote').style.display).toEqual("none");
+});
