@@ -3,10 +3,10 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        index: ['babel-polyfill','./resources/js/index.js'],
+        index: ['babel-polyfill','./index.js'],
     },
     output: {
-        path: path.resolve(__dirname + '/assets/js'),
+        path: path.resolve(__dirname + '/../../assets/js'),
         filename: '[name].js'
     },
     module: {
