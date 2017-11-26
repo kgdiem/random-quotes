@@ -13,8 +13,6 @@ test('appendImage should add an image url to the quote image tag', async () => {
 
   await appendImage('test');
 
-  console.log(document.querySelector('#quote img').getAttribute('src'));
-
   expect(document.querySelector('#quote img').getAttribute('src')).toEqual('test');
 
 });
