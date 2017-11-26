@@ -8,11 +8,19 @@ module.exports = function getImage(queryString){
       const results = json.data;
 
       if(results.length){
-        return Promise.resolve({url: results[0].images.downsized_medium})
+        const index = getRandomImage(results.length);
+
+        return Promise.resolve({url: results[index].images.downsized_medium})
       }
       else{
         return Promise.resolve(undefined);
       }
   
     });
+}
+
+function getRandomImage(length){
+  const random = Math.floor(Math.random() * length);
+  
+  return random;
 }

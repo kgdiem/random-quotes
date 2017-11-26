@@ -11618,12 +11618,20 @@ module.exports = function getImage(queryString) {
     var results = json.data;
 
     if (results.length) {
-      return _promise2.default.resolve({ url: results[0].images.downsized_medium });
+      var index = getRandomImage(results.length);
+
+      return _promise2.default.resolve({ url: results[index].images.downsized_medium });
     } else {
       return _promise2.default.resolve(undefined);
     }
   });
 };
+
+function getRandomImage(length) {
+  var random = Math.floor(Math.random() * length);
+
+  return random;
+}
 
 /***/ }),
 /* 406 */
