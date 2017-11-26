@@ -2,5 +2,5 @@ const appendQuoteAndImage = require('./appendQuoteAndImage');
 
 appendQuoteAndImage();
 
-document.getElementsByTagName('button')[0].onclick = appendQuoteAndImage;
+document.querySelector('button').addEventListener('click', appendQuoteAndImage, false);
 
