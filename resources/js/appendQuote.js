@@ -1,3 +1,3 @@
-module.exports = function appendQuote(quote){
-  document.querySelector('#quote p').textContent = quote; 
+module.exports = function appendQuote(quote, author){
+  document.querySelector('#quote p').textContent = `${quote} ~${author}`; 
 }

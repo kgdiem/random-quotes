@@ -9735,7 +9735,7 @@ module.exports = function () {
             quote = _context.sent;
 
 
-            appendQuote(quote.quoteText);
+            appendQuote(quote.quoteText, quote.quoteAuthor);
 
             _context.next = 7;
             return getImage(quote.quoteAuthor);
@@ -11616,8 +11616,8 @@ module.exports = function getImage(queryString) {
 "use strict";
 
 
-module.exports = function appendQuote(quote) {
-  document.querySelector('#quote p').textContent = quote;
+module.exports = function appendQuote(quote, author) {
+  document.querySelector('#quote p').textContent = quote + ' ~' + author;
 };
 
 /***/ }),

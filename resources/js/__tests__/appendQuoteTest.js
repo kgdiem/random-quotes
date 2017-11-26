@@ -6,8 +6,8 @@ test('appendQuote adds text to the quote paragraph', () => {
 
   const appendQuote = require('../appendQuote');
 
-  appendQuote('test');
+  appendQuote('test', 'test');
 
-  expect(document.querySelector('#quote p').textContent).toEqual('test');
+  expect(document.querySelector('#quote p').textContent).toEqual('test ~test');
   
 });
