@@ -1,6 +1,6 @@
 <?php
 
-$baseURL = "https://api.forismatic.com/api/1.0/";
+$baseURL = "https://api.forismatic.com/api/1.0/?";
 
 $requestURL = $baseURL . $_SERVER['QUERY_STRING'];
 
