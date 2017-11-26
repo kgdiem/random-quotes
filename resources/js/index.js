@@ -17,7 +17,7 @@ async function appendQuoteAndImage(){
 }
 
 function toggleLoading(){
-
+  
 }
 
 function getQuote(){
