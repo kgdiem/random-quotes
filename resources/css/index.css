@@ -1,0 +1,35 @@
+.text-center{
+    text-align: center;
+}
+
+body, button{
+    background-color: #407F7F;
+    color: #fff;
+}
+
+button{
+    padding: 10px;
+    font-size: 1em;
+}
+
+#loading, #quote{
+    font-size: 1.5em;
+}
+
+#quote{
+    background-color: #fff;
+    border-radius: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    color: 	#686868;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+#loading{
+    margin-top: 15px;
+}
