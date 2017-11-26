@@ -9744,7 +9744,7 @@ module.exports = function () {
             image = _context.sent;
 
 
-            appendImage(image.url);
+            appendImage(image.url.url);
 
             toggleLoading();
 
@@ -11581,7 +11581,7 @@ module.exports = function toggleLoading() {
 
 
 module.exports = function getQuote() {
-  return fetch('https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en', { mode: 'no-cors' }).then(function (res) {
+  return fetch('https://kevindiem.com/sites/random-quotes/forismatic.php?method=getQuote&format=json&lang=en').then(function (res) {
     return res.json();
   });
 };
