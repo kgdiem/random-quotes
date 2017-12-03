@@ -8,6 +8,6 @@ test('appendQuote adds text to the quote paragraph', () => {
 
   appendQuote('test', 'test');
 
-  expect(document.querySelector('#quote p').textContent).toEqual('test ~test');
+  expect(document.querySelector('#quote p').textContent).toEqual('test\u00A0~ test');
   
 });

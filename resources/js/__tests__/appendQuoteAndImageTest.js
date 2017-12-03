@@ -7,10 +7,12 @@ test('appendQuoteAndImage should append a quote and an image', async () => {
   
   document.body.innerHTML = `
     <div id="quote">
-      <img>
-      <p></p>
-    </div>
-    <div id="loading"></div>`;
+      <div id="content">
+        <img>
+        <p></p>
+      </div>
+      <div id="loading"></div>
+    </div>`;
  
   const appendQuoteAndImage = require('../appendQuoteAndImage');
   
