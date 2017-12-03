@@ -11571,14 +11571,14 @@ $export($export.S, 'Promise', { 'try': function (callbackfn) {
 
 module.exports = function toggleLoading() {
   var loadingDiv = document.getElementById('loading');
-  var quoteDiv = document.getElementById('quote');
+  var contentDiv = document.getElementById('content');
 
   if (loadingDiv.style.display === '' || loadingDiv.style.display === 'none') {
     loadingDiv.style.display = 'block';
-    quoteDiv.style.display = 'none';
+    contentDiv.style.display = 'none';
   } else if (loadingDiv.style.display === 'block') {
     loadingDiv.style.display = 'none';
-    quoteDiv.style.display = 'block';
+    contentDiv.style.display = 'block';
   }
 };
 
